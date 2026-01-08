@@ -10,17 +10,21 @@ const endpoint = "https://lanciweb.github.io/demo/api/pictures/"
 
 
 axios.get(endpoint)
-.then(response => {
-    const posts = response.data
-    
-    let postOutputs = "";
-       
-    posts.forEach((post, i) => {
-        
-        const { title, date, url } = post;
+    .then(response => {
+        const posts = response.data
 
-        postOutputs += 
-        ` <div class="col-12 col-md-6 col-lg-4">
+        // CREO UNA VARIABILE VUOTA IN CUI INSERIRE LE CARDS CON I DATI OTTENUTI DALL' API
+        let postOutputs = "";
+
+
+        // CREO IL CICLO FOREACH CON CUI ITERARE I DATI DELL' API
+        posts.forEach((post) => {
+
+            // CREO LE TRE VARIABILI A CUI ASSOCIARE I RISPETTIVI DATI OTTENUTI DALL' API
+            const { title, date, url } = post;
+
+            postOutputs +=
+                ` <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-auto photo-card">
                         <div class="photo-wrapper">
                             <img src="${url}" class="card-img-top" alt="">
@@ -33,15 +37,13 @@ axios.get(endpoint)
                         </div>
                     </div>
                 </div>`
+
+
+        });
         
-        
-    });
-    
-    outputCard.innerHTML = postOutputs        
-})
-
-          
-    
+        // UNA VOLTA FINITA L'OPERAZIONE INSERISCO LA CARD NELL'HTML
+        outputCard.innerHTML = postOutputs
+    })
 
 
 
@@ -51,4 +53,6 @@ axios.get(endpoint)
 
 
 
-    
+
+
+
