@@ -1,0 +1,20 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.bg-img{
+    background-image: url("./assets/img/wall.png");
+}
+
+#h1FontS {
+    font-size: 90px;
+}
+
+/* BODY */
+
+.section-bg{
+    background-image: url("./assets/img/cork.png");
+}
