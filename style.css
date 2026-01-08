@@ -21,3 +21,22 @@
 .section-bg {
     background-image: url("./assets/img/cork.png");
 }
+
+/* CARD */
+
+.photo-wrapper {
+    position: relative;
+}
+
+.pin {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.card-img-top {
+    position: relative;
+    z-index: 1;
+}
