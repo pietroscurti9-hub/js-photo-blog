@@ -1,20 +1,23 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 
 /* HEADER */
-.bg-img{
+.bg-img {
     background-image: url("./assets/img/wall.png");
 }
 
 #h1FontS {
-    font-size: 90px;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: 'Edu TAS Beginner', sans-serif;
 }
 
 /* BODY */
 
-.section-bg{
+.section-bg {
     background-image: url("./assets/img/cork.png");
 }
