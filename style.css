@@ -22,6 +22,8 @@
     background-image: url("./assets/img/cork.png");
 }
 
+
+
 /* CARD */
 
 .photo-wrapper {
@@ -40,3 +42,24 @@
     position: relative;
     z-index: 1;
 }
+
+.card-text-font {
+    font-family: 'Sometype Mono', monospace;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    #h1FontS{
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 992px) {
+    #h1FontS{
+        font-size: 100px;
+    }
+}
+

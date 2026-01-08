@@ -28,8 +28,8 @@ axios.get(endpoint)
                         </div>
 
                         <div class="card-body">
-                            <h5 class="card-title">${title}</h5>
-                            <p class="card-text">${date}</p>
+                            <h5 class="card-title card-text-font">${title}</h5>
+                            <p class="card-text card-text-font">${date}</p>
                         </div>
                     </div>
                 </div>`
