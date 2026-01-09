@@ -2,12 +2,11 @@
 // SELEZIONO OUTPUT DEL DOM
 const outputCard = document.querySelector(".innerCard")
 
+const overlay = document.querySelector(".overlay-container");
+const button = document.querySelector(".btn-overlay");
+
 // RICHIAMO L'API CON UNA VARIABILE
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/"
-
-
-
-
 
 axios.get(endpoint)
     .then(response => {
@@ -40,18 +39,41 @@ axios.get(endpoint)
 
 
         });
-        
+
         // UNA VOLTA FINITA L'OPERAZIONE INSERISCO LA CARD NELL'HTML
         outputCard.innerHTML = postOutputs
 
+        
         const cards = document.querySelectorAll(".card");
 
-        console.log(cards);
         // loop cards
-        // add click event to every card el
-        
-    })
 
+        cards.forEach((singleCard) => {
+
+            const image = singleCard.querySelector(".card-img-top")
+
+            // add click event to every card element
+
+            singleCard.addEventListener('click', () => {
+                
+                overlay.style.display = "flex"
+                console.log(image.src);
+                const overlayImg = overlay.querySelector("img")
+                overlayImg.src = image.src
+            });
+
+
+            
+        });
+
+    });
+
+
+button.addEventListener(`click`, () => {
+
+    overlay.style.display = "none"
+
+})
 
 
 
