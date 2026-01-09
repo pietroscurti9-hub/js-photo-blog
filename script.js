@@ -24,7 +24,7 @@ axios.get(endpoint)
             const { title, date, url } = post;
 
             postOutputs +=
-                ` <div class="col-12 col-md-6 col-lg-4">
+                `<div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-auto photo-card">
                         <div class="photo-wrapper">
                             <img src="${url}" class="card-img-top" alt="">
@@ -43,7 +43,15 @@ axios.get(endpoint)
         
         // UNA VOLTA FINITA L'OPERAZIONE INSERISCO LA CARD NELL'HTML
         outputCard.innerHTML = postOutputs
+
+        const cards = document.querySelectorAll(".card");
+
+        console.log(cards);
+        // loop cards
+        // add click event to every card el
+        
     })
+
 
 
 
